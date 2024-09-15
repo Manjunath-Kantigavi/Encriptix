@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background, #f4f4f4);
+    color: var(--text-color, #000);
+    transition: background-color 0.5s ease, color 0.5s ease;
+    /* max-width: fit-content;*/
+    height: 100%;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--header-bg, #333);
+    color: var(--header-text, #fff);
+    position: relative;
+    ;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Center the title in the header */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    flex: 1;
+}
+
+/* Theme buttons on the right */
+.theme-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.theme-btn {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--footer-bg, #333);
+    color: var(--footer-text, #fff);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+    font-family: 'Arial', sans-serif;
+
+}
+
+.calculator {
+    background-color: var(--calculator-background);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    max-height: fit-content;
+}
+
+:root {
+    --background: #f4f4f4;
+    --calculator-background: #ffffff;
+    --button-background: #f1f1f1;
+    --button-hover: #ddd;
+    --button-active: #ccc;
+    --operator-color: #ff8c00;
+    --memory-color: #007acc;
+    --equal-color: #32cd32;
+    --text-color: #000;
+}
+
+.dark-mode {
+    --background: #333;
+    --calculator-background: #444;
+    --button-background: #555;
+    --button-hover: #666;
+    --button-active: #777;
+    --text-color: #fff;
+    --operator-color: #ffa500;
+    --memory-color: #66c2ff;
+    --equal-color: #90ee90;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    margin-bottom: 15px;
+    /* padding: 15px; */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--button-background);
+    color: var(--text-color);
+}
+
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--button-background);
+    transition: background-color 0.3s ease;
+    color: var(--text-color);
+}
+
+/* Specific button styles */
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button:active {
+    background-color: var(--button-active);
+}
+
+button:nth-child(1) {
+    background-color: #ff6666;
+    /* Clear (C) button */
+}
+
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(9),
+button:nth-child(10),
+button:nth-child(11),
+button:nth-child(12),
+button:nth-child(13),
+button:nth-child(14),
+button:nth-child(15),
+button:nth-child(16) {
+    background-color: var(--operator-color);
+    /* Operators */
+}
+
+button:nth-child(5),
+button:nth-child(6),
+button:nth-child(7),
+button:nth-child(8) {
+    background-color: var(--memory-color);
+    /* Memory Buttons */
+}
+
+button:nth-child(17) {
+    background-color: var(--equal-color);
+    /* Equal button */
+    grid-column: span 2;
+}
+
+/* Add color to number buttons */
+button:nth-child(18),
+button:nth-child(19),
+button:nth-child(20),
+button:nth-child(21),
+button:nth-child(22),
+button:nth-child(23),
+button:nth-child(24),
+button:nth-child(25),
+button:nth-child(26) {
+    background-color: #dcdcdc;
+}
